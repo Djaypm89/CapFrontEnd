@@ -1,9 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import App from './components/App';
+import 'bootstrap/dist/css/bootstrap.css';
 
-const jsxElement = <h1>R2V</h1>
 
-ReactDOM.render(jsxElement, document.getElementById('root'));
+
+
+ReactDOM.render(<App/>, document.getElementById('root'));
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////
 
