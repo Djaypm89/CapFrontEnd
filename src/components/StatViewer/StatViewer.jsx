@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Stat from '../Stat/Stat';
 
 const StatViewer = (props) => {
     return ( 
@@ -10,8 +10,7 @@ const StatViewer = (props) => {
         </div>
 
         <div className="col-md-4">
-            <h1>{props.stat.location}</h1>
-            <h4>{props.stat.data}</h4>
+            <Stat stat={props.stat} />
         </div>
 
         <div className="col-md-4">
