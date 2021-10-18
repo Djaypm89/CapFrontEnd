@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css'
 import TitleBar from './TitleBar/TitleBar';
 import StatViewer from './StatViewer/StatViewer';
+import StatCreator from './StatCreator/StatCreator'; 
 
 class App extends Component {
     constructor (props){
@@ -46,6 +47,7 @@ class App extends Component {
             <div className="container-fluid">
                 <TitleBar />
                 <StatViewer stat={this.stats[this.state.statNumber]} nextStat={this.goToNextStat} previousStat={this.goToPreviousStat}/>
+                <StatCreator />
 
             </div>
         )

@@ -13,17 +13,17 @@
     border-right: solid maroon;
     border-bottom: solid maroon;
     border-width: 1 1px;
-    height: 650px;
+    height: 450px;
     width: 100%;
     border-bottom-left-radius: 15%;
     border-top-right-radius: 5%;
 }
 
-.title {
+.location {
     padding: 20%;
 }
 
-.author {
+.data {
     padding-top: 10%;
     padding-left: 5%;
     padding-right: 5%;

@@ -3,10 +3,10 @@ import './Stat.css'
 
 const Stat = (props) => {
     return ( 
-        <div className="book">
+        <div className="frame">
             <div className="cover">
-                <h1 className="title">{props.stat.location}</h1>
-                <h4 className="author">{props.stat.data}</h4>
+                <h1 className="location">{props.stat.location}</h1>
+                <h4 className="data">{props.stat.data}</h4>
             </div>
         </div>
      );
