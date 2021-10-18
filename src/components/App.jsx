@@ -3,6 +3,8 @@ import './App.css'
 import TitleBar from './TitleBar/TitleBar';
 import StatViewer from './StatViewer/StatViewer';
 import StatCreator from './StatCreator/StatCreator'; 
+import Footer from './Footer/Footer';
+
 
 class App extends Component {
     constructor (props){
@@ -56,6 +58,7 @@ class App extends Component {
                 <TitleBar />
                 <StatViewer stat={this.stats[this.state.statNumber]} nextStat={this.goToNextStat} previousStat={this.goToPreviousStat}/>
                 <StatCreator createNewStat={this.createStat} />
+                <Footer />
             </div>
         )
     }
