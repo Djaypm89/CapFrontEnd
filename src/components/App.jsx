@@ -42,13 +42,20 @@ class App extends Component {
         })
     }
 
+    createStat = (newStat) => {
+        console.log('from the createStat on App component', newStat)
+        this.stats.push(newStat);
+        this.setState ({
+            statNumber: this.stats.length - 1
+        })
+    }
+
     render(){
         return (
             <div className="container-fluid">
                 <TitleBar />
                 <StatViewer stat={this.stats[this.state.statNumber]} nextStat={this.goToNextStat} previousStat={this.goToPreviousStat}/>
-                <StatCreator />
-
+                <StatCreator createNewStat={this.createStat} />
             </div>
         )
     }
