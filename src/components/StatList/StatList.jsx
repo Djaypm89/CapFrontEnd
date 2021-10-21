@@ -91,10 +91,10 @@ class StatList extends Component {
                 </tbody>
             </table>
       
-            <table class='styled-table'>
+            <table className='styled-table'>
                 <tbody>
                 <tr>
-                    <td class="active-row">
+                    <td className="active-row">
                     
                     </td>
                 </tr>

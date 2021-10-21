@@ -1,9 +1,11 @@
 .Statlist { 
     background-color: red;
-    width: 50%
+    width: 50%;
+   
 }
 
 h1 {
+   
     padding-bottom: 0.2em;
     padding-left: 1em;
 }
