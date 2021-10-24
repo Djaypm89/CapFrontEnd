@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+
+
 import './App.css'
 import StatList from './StatList/StatList';
 import TitleBar from './TitleBar/TitleBar';
+import { Redirect } from 'react-router-dom';
 import Login from './Login/Login';
+// import { Route } from 'react-router';
+// import { BrowserRouter } from 'react-router-dom';
 
 // import StatViewer from './StatViewer/StatViewer';
 // import StatCreator from './StatCreator/StatCreator'; 
@@ -86,7 +92,7 @@ class App extends Component {
                 
                 <TitleBar />
             
-                <Login />
+                {/* <Login /> */}
                 <p>{}</p>
 
                 <input type="text" value={this.state.city} onChange={e =>this.cityChanged(e) } placeholder="City" /> 

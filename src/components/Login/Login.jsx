@@ -1,4 +1,10 @@
-import React, { Component} from 'react';
+import React, { Component, Fragment} from 'react';
+// import ReactDOM from 'react-dom';
+// import { HashRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+// import App from '../App';
+// import { BrowserRouter } from 'react-router-dom';
+// import {Route, BrowserRouter} from 'react-router-dom';
+
 
 
 class Login extends Component {
@@ -17,14 +23,16 @@ class Login extends Component {
     .then(
       data => {
         console.log(data);
-        // this.props.userLogin(data.token);
+        // this.props.login(data.token);
+        // return <Redirect to="/app" />;
+        // window.location = '/App/';
       }
     )
     .catch( error => console.error(error))
   }
 
   register = event => {
-    fetch('http://127.0.0.1:8000/auth/users/', {
+    fetch('http://127.0.0.1:8000/auth/username/', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
       body: JSON.stringify(this.state.credentials)
@@ -32,7 +40,10 @@ class Login extends Component {
     .then( data => data.json())
     .then(
       data => {
-        console.log(data.token);
+        console.log(data);
+
+        // < Redirect to='/login/' />
+        // window.location = '/login/';
       }
     )
     .catch( error => console.error(error))
@@ -57,13 +68,19 @@ class Login extends Component {
         <br/>
         <label>
           Password :
-          <input type="password" name="password"
+          <input type="text" name="password"
            value={this.state.credentials.password}
            onChange={this.inputChanged} />
         </label>
         <br/>
         
         <button onClick={this.login}>Login</button>
+            {/* <Router>
+                <Switch>
+                  <Route exact path="/app" component={App} />
+                </Switch>
+            </Router>
+                   */}
         <button onClick={this.register}>Register</button>
         
       </div>

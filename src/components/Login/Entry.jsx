@@ -5,11 +5,12 @@
 // // import StatList from '../StatList/StatList';
 
 // function Entry() {
-
+    
 //   const [token, setToken] = useState('');
 
-//   const userLogin = (tok) => {
-//     setToken(tok);
+//   const userLogin = (token) => {
+//     setToken(token);
+      //  console.log(token);
 //   }
 
 //   return (
