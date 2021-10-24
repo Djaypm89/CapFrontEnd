@@ -43,19 +43,21 @@ class StatList extends Component {
 
         for(let i = 0 ; i < this.state.stats.length ; i++) {
             const stat = this.state.stats[i];
-            const record = (<tr key={stat.id}><td>{ stat.sizeRank }</td>
-                                        <td>{ stat.country }</td>
-                                        <td>{ stat.state }</td>
-                                        <td>{ stat.city}</td>
-                                        <td>{ stat.rent1YearAvg}</td>
-                                        <td>{ stat.rent5YearAvg}</td>
-                                        <td>{ stat.value1YearAvg}</td>
-                                        <td>{ stat.value5YearAvg}</td>
+            const record = (<tr key={stat.id}><td>{ stat.sizeRank }
+                </td>
+                    <td>{ stat.country }</td>
+                    <td>{ stat.state }</td>
+                    <td>{ stat.city}</td>
+                    <td>{ stat.rent1YearAvg}</td>
+                    <td>{ stat.rent5YearAvg}</td>
+                    <td>{ stat.value1YearAvg}</td>
+                    <td>{ stat.value5YearAvg}</td>
 
-                                        <td>{ stat.value1YearAvg ? (100 * stat.rent1YearAvg / stat.value1YearAvg).toFixed(1) : "" }</td>
-                                        <td>{ stat.value5YearAvg ? (100 * stat.rent5YearAvg / stat.value5YearAvg).toFixed(1) : "" }</td>
+                    <td>{ stat.value1YearAvg ? (100 * stat.rent1YearAvg / stat.value1YearAvg).toFixed(1) : "" }</td>
+                    <td>{ stat.value5YearAvg ? (100 * stat.rent5YearAvg / stat.value5YearAvg).toFixed(1) : "" }</td>
 
-                                    </tr>)
+                </tr>)   
+                             
             if(this.props.filter.city === '' || this.props.filter.city === stat.city) {
                 if(this.props.filter.state === '' || this.props.filter.state === stat.state) {
                     if(this.props.filter.country === '' || this.props.filter.country === stat.country) {
@@ -72,7 +74,7 @@ class StatList extends Component {
             <table className="table styled-table">
                 <thead>
                     <tr>
-                    <th>Rank</th>
+                    <th>Pop. Rank</th>
                     <th>Country</th>
                     <th>State</th>
                     <th>City</th>

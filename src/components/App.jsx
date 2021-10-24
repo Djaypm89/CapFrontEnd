@@ -92,7 +92,7 @@ class App extends Component {
                 
                 <TitleBar />
             
-                {/* <Login /> */}
+                <Login />
                 <p>{}</p>
 
                 <input type="text" value={this.state.city} onChange={e =>this.cityChanged(e) } placeholder="City" /> 
